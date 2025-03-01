@@ -4,6 +4,15 @@
   font-family: Outfit;
 }
 
+/* html, body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+} */
+
+
 @theme {
   --color-lightHover: #fcf4ff;
   --color-darkHover: #2a004a;
