@@ -12,6 +12,7 @@ html {
   scroll-behavior: smooth;
 } */
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-lightHover: #fcf4ff;
@@ -22,6 +23,9 @@ html {
 
   --shadow-black: 4px 4px 0 #000;
   --shadow-white: 4px 4px 0 #fff;
+  --shadow-dark: 0 4px 6px -1px rgba(255, 255, 255, 0.2);
+
+
 
   /* --grid-cols-auto: repeat(auto-fit, minmax(200px, 1fr));  --- not working! ---  */ 
 }
