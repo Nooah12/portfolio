@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
         <div>
-            <Image src={assets.profile_img} alt='' className='rounded-full w-32' />
+            {/* <Image src={"/profilbild.jpg"} alt='' className='rounded-full w-32' width={128} height={128} /> */}
         </div>
         <h3 className='flex items-end text-xl md:text-2xl mb-3 gap-2 font-Ovo'>
             Hi! I'm Noah <Image src={assets.hand_icon} alt='' className='w-6' /> 

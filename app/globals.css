@@ -23,3 +23,10 @@ html {
   --shadow-black: 4px 4px 0 #000;
   --shadow-white: 4px 4px 0 #fff;
 }
+
+.contact-bg {
+  background-image: url('/footer-bg-color.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90% auto;
+}
