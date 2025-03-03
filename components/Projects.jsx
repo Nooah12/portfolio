@@ -14,7 +14,7 @@ const Projects = () => {
             Take a look and see what I've been up to!
         </p>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 my-10 gap-5'>
+        <div className='grid grid-cols-auto my-10 gap-5'>
             {workData.map((project, index)=>(
                 <div key={index} style={{backgroundImage: `url(${project.bgImage})`}} className='aspect-square bg-no-repeat bg-cover rounded-lg relative cursor-pointer group'>
                     <div className='bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7'>
