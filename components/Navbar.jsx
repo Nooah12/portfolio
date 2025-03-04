@@ -40,7 +40,6 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
             ${isScroll ? "" : "bg-white/50 shadow-sm dark:border dark:border-white/50 dark:bg-transparent"} `}>
             <li><a className='font-Ovo' href="#top">Home</a></li>
             <li><a className='font-Ovo' href="#about">About me</a></li>
-            <li><a className='font-Ovo' href="#services">Services</a></li>
             <li><a className='font-Ovo' href="#project">My Work</a></li>
             <li><a className='font-Ovo' href="#contact">Contact me</a></li>
         </ul>

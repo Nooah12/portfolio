@@ -88,7 +88,7 @@ const Contact = () => {
             type='submit' className='px-8 py-3 border border-gray-400 rounded-full bg-black/80 text-white flex items-center gap-2 mx-auto 
             hover:bg-black duration-500 cursor-pointer dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover'>
                 Send message <Image src={assets.right_arrow_white} alt='' className='w-4' />
-            </motion.button>
+            </motion.button>  
 
             <p className='text-center mt-4 text-gray-700 font-Ovo dark:text-white/85'>I'll get back to you as soon as possible.</p>
             <p className='mt-4'>{result}</p>
