@@ -33,7 +33,8 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
     <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 
         ${isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-dark" : ""}`}>
         <a href="#top">
-            <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt='' className="w-28 cursor-pointer mr-14" />
+            {/* <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt='' className="w-28 cursor-pointer mr-14" /> */}
+            <Image src={isDarkMode ? '/noah-logo-darkk.png' : '/noah-logo.png'} alt='' className="w-28 cursor-pointer mr-14" width={500} height={200}/>
         </a>
 
         <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 
@@ -41,7 +42,6 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
             <li><a className='font-Ovo' href="#top">Home</a></li>
             <li><a className='font-Ovo' href="#about">About me</a></li>
             <li><a className='font-Ovo' href="#project">My Work</a></li>
-            <li><a className='font-Ovo' href="#contact">Contact me</a></li>
         </ul>
 
         <div className='flex items-center gap-4'>

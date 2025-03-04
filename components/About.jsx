@@ -32,7 +32,7 @@ const About = ({isDarkMode}) => {
             transition={{ duration: 0.6}}
             >
                 {/* <Image src={assets.user_image} alt='user' className='w-full rounded-3xl' /> */}
-                <Image src={"/profilbild.jpg"} alt='user' className='rounded-3xl w-full' width={500} height={600}  />
+                <Image src={"/presentation-examens.JPG"} alt='user' className='rounded-3xl w-full' width={500} height={600} />
             </motion.div>
             <motion.div className='flex-1'
                 initial={{ opacity: 0 }}

@@ -12,6 +12,7 @@ const Header = () => {
         >
             <Image src={"/profilbild.jpg"} alt='' className='rounded-full w-32' width={128} height={128} />
         </motion.div> */}
+
         <motion.h3 className='flex items-end text-xl md:text-2xl mb-3 gap-2 font-Ovo'
             initial={{ y: -20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -25,21 +26,22 @@ const Header = () => {
                         repeatDelay: 1.5,
                         ease: "easeInOut" 
                     }}
-            ><Image src={assets.hand_icon} alt='' className='w-6' /> </motion.div>
+            ><Image src={assets.hand_icon} alt='' className='w-6' /></motion.div>
         </motion.h3>
+
         <motion.h1 className='text-3xl sm:text-6xl lg:text-[66px] font-Ovo'
             initial={{ y: -30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-        >frontend developer student</motion.h1>
+        >frontend developer</motion.h1>
+
         <motion.p className='max-w-2xl mx-auto font-Ovo'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.7 }}>
-            I'm a frontend developer student with a passion for creating intuitive, and dynamic user interfaces. 
-            I'm a quick learner and I'm always looking to expand my knowledge and skill set. 
-            I'm a team player and I'm excited to work alongside other developers and designers to create amazing applications. 
+            I like making websites and apps that are both <span className='text-gray-700 dark:text-white'>functional</span> and <span className='text-gray-700 dark:text-white'>beautiful</span>.
         </motion.p>
+
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
             <motion.a href="#contact" className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'
                 initial={{ y: 30, opacity: 0 }}
