@@ -1,8 +1,8 @@
-import { assets } from '@/assets/assets'
+import { assets, linkIcons } from '@/assets/assets'
 import Image from 'next/image'
 import { motion } from "motion/react"
 
-const Header = () => {
+const Header = ({isDarkMode}) => {
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
         <motion.div
@@ -44,19 +44,31 @@ const Header = () => {
         </motion.p>
 
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-            <motion.a href="#contact" className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'
+{/*             <motion.a href="#contact" className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1 }}>
                 contact me <Image src={assets.right_arrow_white} alt='' className='w-4' /> 
-            </motion.a>
+            </motion.a> */}
+            
             <motion.a href="/CV_LIA25.pdf" download className='px-10 py-3 border rounded-full text-gray-700 border-gray-500 flex items-center gap-2
             hover:bg-lightHover duration-500 dark:text-black dark:border-white dark:hover:bg-darkHover bg-white dark:hover:text-white group'
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 1.2 }}>
-                my resume <Image src={assets.download_icon} alt='' className='w-4 dark:group-hover:filter dark:group-hover:brightness-0 dark:group-hover:invert' /> 
+                transition={{ duration: 0.6, delay: 1 }}>
+                my resume <Image src={assets.download_icon} alt='resume' className='w-4 dark:group-hover:filter dark:group-hover:brightness-0 dark:group-hover:invert' /> 
             </motion.a>
+            <div className='flex flex-row gap-4'>
+            {linkIcons.map((icon, iconDark, index) => (
+                <motion.a href={icon.link} key={index}
+                    initial={{ y: 30, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 1.2 }}
+                    className='group'>
+                        <Image src={isDarkMode ? icon.iconDark : icon.icon} alt='link-icons' className='w-12'/>
+                </motion.a>
+            ))}
+            </div>
         </div>
     </div>
   )

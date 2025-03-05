@@ -35,6 +35,10 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import github_icon from './github-svg.svg';
+import github_icon_dark from './github-dark.svg';
+import linkedin_icon from './linkedin-svg.svg';
+import linkedin_icon_dark from './linkedin-dark.svg';
 
 export const assets = {
     user_image,
@@ -73,7 +77,11 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    github_icon,
+    github_icon_dark,
+    linkedin_icon,
+    linkedin_icon_dark
 };
 
 export const workData = [
@@ -108,10 +116,18 @@ export const serviceData = [
 
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'Frontend Developer at Futuregames' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Check out some of my projects below' }
 ];
 
 export const toolsData = [
     assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
 ];
+
+export const linkIcons = [
+    { icon: assets.github_icon, iconDark: assets.github_icon_dark, link: 'https://github.com/Nooah12' },
+   /*  { icon: assets.github_icon, link: 'https://github.com/Nooah12' }, */
+    { icon: assets.linkedin_icon, iconDark: assets.linkedin_icon_dark, link: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' },
+    /* { icon: assets.linkedin_icon, link: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' }, */
+    /* { icon: assets.linkedin_icon_dark, link: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' } */
+]

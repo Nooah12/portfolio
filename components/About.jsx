@@ -40,9 +40,9 @@ const About = ({isDarkMode}) => {
                 transition={{ duration: 0.6, delay: 0.8 }}
             >
                 <p className='mb-10 max-w-2xl font-Ovo'>
-                    I'm a frontend developer student with a passion for creating intuitive, and dynamic user interfaces. 
-                    I'm a quick learner and I'm always looking to expand my knowledge and skill set. 
-                    I'm a team player and I'm excited to work alongside other developers and designers to create amazing applications.
+                Fully committed to the philosophy of lifelong learning, I’m a frontend developer student with a deep passion for JavaScript, React, and all things web development. 
+                The unique combination of creativity, logic, and technology — along with the fact that there’s always something new to learn, keeps me excited and motivated. 
+                When I’m not at my computer I enjoy listening to new music, staying active and hanging out with friends.
                 </p>
 
                 {/* ---- Cards ---- */}
