@@ -9,7 +9,7 @@ import vscode from './vscode.png';
 import firebase from './firebase.png';
 import figma from './figma.png';
 import git from './git.png';
-import mongodb from './mongodb.png';
+import mongodb from './skills/mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
 import logo_dark from './logo_dark.png';
@@ -39,6 +39,13 @@ import github_icon from './github-svg.svg';
 import github_icon_dark from './github-dark.svg';
 import linkedin_icon from './linkedin-svg.svg';
 import linkedin_icon_dark from './linkedin-dark.svg';
+import html from './skills/html.svg';
+import css from './skills/css.svg';
+import js from './skills/js.svg';
+import react from './skills/react.svg';
+import next from './skills/next.svg';
+import node from './skills/node.svg';
+import tailwind from './skills/tailwind.svg';
 
 export const assets = {
     user_image,
@@ -81,7 +88,8 @@ export const assets = {
     github_icon,
     github_icon_dark,
     linkedin_icon,
-    linkedin_icon_dark
+    linkedin_icon_dark,
+    html, css, js, react, next, node, tailwind,
 };
 
 export const workData = [
@@ -121,13 +129,11 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.html, assets.css, assets.js, assets.react, assets.next, assets.node, assets.git, assets.mongodb, assets.figma, assets.tailwind,  
 ];
 
 export const linkIcons = [
     { icon: assets.github_icon, iconDark: assets.github_icon_dark, link: 'https://github.com/Nooah12' },
    /*  { icon: assets.github_icon, link: 'https://github.com/Nooah12' }, */
-    { icon: assets.linkedin_icon, iconDark: assets.linkedin_icon_dark, link: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' },
-    /* { icon: assets.linkedin_icon, link: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' }, */
-    /* { icon: assets.linkedin_icon_dark, link: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' } */
+    { icon: assets.linkedin_icon, iconDark: assets.linkedin_icon_dark, link: 'https://linkedin.com/in/noah-gordon12/' },
 ]

@@ -13,13 +13,13 @@ const About = ({isDarkMode}) => {
         initial={{ opacity: 1, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        >Introduction</motion.h4>
+        >About me</motion.h4>
 
         <motion.h2 className='text-center text-5xl font-Ovo'
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        >About me</motion.h2>
+        >Introduction</motion.h2>
 
         <motion.div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'
         initial={{ opacity: 0 }}
@@ -42,10 +42,10 @@ const About = ({isDarkMode}) => {
                 <p className='mb-10 max-w-2xl font-Ovo'>
                 Fully committed to the philosophy of lifelong learning, I’m a frontend developer student with a deep passion for JavaScript, React, and all things web development. 
                 The unique combination of creativity, logic, and technology — along with the fact that there’s always something new to learn, keeps me excited and motivated. 
-                When I’m not at my computer I enjoy listening to new music, staying active and hanging out with friends.
+                When I’m not at my computer I enjoy listening and finding new music, staying active and hanging out with friends.
                 </p>
 
-                {/* ---- Cards ---- */}
+                {/* ------------------ Cards --------------------- */}
 
                 <motion.ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'
                 initial={{ opacity: 0 }}
@@ -64,13 +64,13 @@ const About = ({isDarkMode}) => {
                     ))}
                 </motion.ul>
 
-                {/* ---- TOOLS I USE ---- */}
+                {/* ------------------- SKILLS  ------------------ */}
 
                 <motion.h4 className='my-6 text-gray-700 font-Ovo dark:text-white/90'
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 1.3 }}
-                >Tools I use</motion.h4>
+                >Skills</motion.h4>
 
                 <motion.ul className='flex items-center gap-3 sm:gap-5'
                 initial={{ opacity: 0 }}

@@ -65,7 +65,7 @@ const Header = ({isDarkMode}) => {
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 1.2 }}
                     className='group'>
-                        <Image src={isDarkMode ? icon.iconDark : icon.icon} alt='link-icons' className='w-12'/>
+                        <Image src={isDarkMode ? icon.iconDark : icon.icon} alt='link-icons' className='w-11'/>
                 </motion.a>
             ))}
             </div>
