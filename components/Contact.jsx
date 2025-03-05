@@ -52,7 +52,7 @@ const Contact = () => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.5 }}
         className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
-            I'd love to hear from you! Whether you have a question, want to work together, or just want to say hello, feel free to reach out to me through the form below.
+            Whether you have a question, want to work together, or just want to say hello, feel free to reach out to me through the form below and I'll get back to you as soon as possible.
         </motion.p>
 
         <motion.form 
@@ -90,7 +90,6 @@ const Contact = () => {
                 Send message <Image src={assets.right_arrow_white} alt='' className='w-4' />
             </motion.button>  
 
-            <p className='text-center mt-4 text-gray-700 font-Ovo dark:text-white/85'>I'll get back to you as soon as possible.</p>
             <p className='mt-4'>{result}</p>
         </motion.form>
         
