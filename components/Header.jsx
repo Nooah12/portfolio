@@ -39,8 +39,7 @@ const Header = ({isDarkMode}) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.7 }}>
-            I like making applications that are both <span className='text-gray-700 dark:text-white/65'>functional</span> and <span className='text-gray-700 dark:text-white/65'>beautiful</span>.
-            <br></br>Currently searching for an <span className='text-red-400'>internship (LIA)</span> for spring 2025 – feel free to explore my projects!
+            Currently seeking an <span className='text-red-400'>internship (LIA)</span> during spring 2025 – feel free to explore my projects!
         </motion.p>
 
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
