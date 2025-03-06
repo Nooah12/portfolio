@@ -4,7 +4,7 @@ import { motion } from "motion/react"
 
 const Projects = ({isDarkMode}) => {
   return (
-    <motion.div id='project' className='w-full px-[12%] py-10 scroll-mt-20'
+    <motion.section id='project' className='w-full px-[12%] py-10 scroll-mt-20'
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1 }}
@@ -69,7 +69,7 @@ const Projects = ({isDarkMode}) => {
             hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover'>
                 Show more <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='right arrow' className='w-4'/>
         </motion.a>
-    </motion.div>
+    </motion.section>
   )
 }
 

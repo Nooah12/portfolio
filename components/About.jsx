@@ -4,7 +4,7 @@ import {motion} from "motion/react"
 
 const About = ({isDarkMode}) => {
   return (
-    <motion.div id='about' className='w-full px-[12%] py-10 scroll-mt-20'
+    <motion.section id='about' className='w-full px-[12%] py-10 scroll-mt-20'
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1 }}
@@ -21,20 +21,22 @@ const About = ({isDarkMode}) => {
         transition={{ duration: 0.5, delay: 0.5 }}
         >Introduction</motion.h2>
 
-        <motion.div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'
+        <motion.div className='flex w-full flex-col lg:flex-row items-center justify-center gap-20 my-20'
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         >
-            <motion.div className='w-64 sm:w-80 rounded-3xl max-w-none'
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6}}
+{/*             <motion.div className='w-64 sm:w-80 rounded-3xl max-w-none'
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6}}
             >
-                {/* <Image src={assets.user_image} alt='user' className='w-full rounded-3xl' /> */}
                 <Image src={"/presentation-examens.JPG"} alt='user' className='rounded-3xl w-full' width={500} height={600} />
-            </motion.div>
-            <motion.div className='flex-1'
+            </motion.div> */}
+
+            {/* ------------Text--------------- */}
+
+            <motion.div className='flex-1 flex flex-col items-center'
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -72,7 +74,7 @@ const About = ({isDarkMode}) => {
                 transition={{ duration: 0.5, delay: 1.3 }}
                 >Skills</motion.h4>
 
-                <motion.ul className='flex items-center gap-3 sm:gap-5'
+                <motion.ul className='flex flex-wrap items-center gap-3 sm:gap-5'
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1.5 }}
@@ -88,7 +90,7 @@ const About = ({isDarkMode}) => {
                 </motion.ul>
             </motion.div>
         </motion.div>
-    </motion.div>
+    </motion.section>
   )
 }
 
