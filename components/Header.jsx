@@ -39,8 +39,8 @@ const Header = ({isDarkMode}) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.7 }}>
-            I like making websites and apps that are both <span className='text-gray-700 dark:text-white'>functional</span> and <span className='text-gray-700 dark:text-white'>beautiful</span>.
-            Hej! Jag heter Noah och är frontendutvecklare med fokus på React och Next.js. Just nu söker jag praktik (LIA) våren 2025. Kolla gärna in mina projekt!
+            I like making applications that are both <span className='text-gray-700 dark:text-white/65'>functional</span> and <span className='text-gray-700 dark:text-white/65'>beautiful</span>.
+            <br></br>Currently searching for an <span className='text-red-400'>internship (LIA)</span> for spring 2025 – feel free to explore my projects!
         </motion.p>
 
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
@@ -51,16 +51,25 @@ const Header = ({isDarkMode}) => {
                 contact me <Image src={assets.right_arrow_white} alt='' className='w-4' /> 
             </motion.a> */}
             
-            <motion.a href="/CV_LIA25.pdf" download className='px-10 py-3 border rounded-full text-gray-700 border-gray-500 flex items-center gap-2
-            hover:bg-lightHover duration-500 dark:text-black dark:border-white dark:hover:bg-darkHover bg-white dark:hover:text-white group'
+            <motion.a 
+                href="/CV_LIA25.pdf" 
+                target='_blank' 
+                rel='noopener noreferrer'
+                className='px-10 py-3 border rounded-full text-gray-700 border-gray-500 flex items-center gap-2
+                hover:bg-lightHover duration-500 dark:text-black dark:border-white dark:hover:bg-darkHover bg-white dark:hover:text-white group'
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1 }}>
-                my resume <Image src={assets.download_icon} alt='resume' className='w-4 dark:group-hover:filter dark:group-hover:brightness-0 dark:group-hover:invert' /> 
+                my resume 
+                <Image src={assets.download_icon} alt='resume' className='w-4 dark:group-hover:filter dark:group-hover:brightness-0 dark:group-hover:invert' /> 
             </motion.a>
+
             <div className='flex flex-row gap-4'>
             {linkIcons.map((icon, iconDark, index) => (
-                <motion.a href={icon.link} key={index}
+                <motion.a 
+                    href={icon.link} key={index}
+                    target='_blank'
+                    rel='noopener noreferrer'
                     initial={{ y: 30, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 1.2 }}
