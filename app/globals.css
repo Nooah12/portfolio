@@ -34,6 +34,10 @@ html {
   .grid-cols-auto {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+
+  .grid-cols-projects {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
 }
 
 .contact-bg {

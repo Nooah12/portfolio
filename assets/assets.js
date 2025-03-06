@@ -94,24 +94,24 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
+        title: 'Parking Time',
+        description: 'A real-world project in collaboration with Parking Time.',
+        bgImage: '/parking-time.jpg',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
+        title: 'MovieTime',
+        description: 'Final gradutation project',
+        bgImage: '/movietime-shows.png',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title: 'reddit clone',
+        description: 'Database interaction, authentication, CRUD',
+        bgImage: '/reddit-clone.png',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        title: 'TheMealDB',
+        description: 'Context and Dynamic Routing',
+        bgImage: '/themealdbb.png',
     },
 ]
 
@@ -123,7 +123,7 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'Mostly Next.js with TypeScript and Tailwind' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'Frontend Developer at Futuregames' },
     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Check out some of my projects below' }
 ];
