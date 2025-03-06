@@ -70,20 +70,22 @@ const Projects = ({isDarkMode}) => {
                 <motion.div key={index} whileHover={{ scale: 1.05 }}>
                     {/* Project Image */}
                     <motion.div 
-                        
                         transition={{ duration: 0.3 }}
                         style={{ backgroundImage: `url(${project.bgImage})` }}
-                        className='aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-lg'
+                        className='aspect-[16/10] bg-center bg-no-repeat bg-cover'
                     />
                     
                     {/* Project Info */}
-                    <div className=' border-gray-400 rounded-lg py-3 px-5 flex flex-col gap-2 shadow-md'>
-                        <h2 className='font-semibold text-gray-700 dark:text-white'>{project.title}</h2>
-                        <p className='text-sm text-gray-600 dark:text-white/80'>{project.description}</p>
-                        <div className='flex gap-4 mt-2 justify-end'>
-                            <a href={project.liveUrl} target='_blank' rel='noopener noreferrer' className='text-blue-600 text-sm hover:underline'>Live Demo</a>
-                            <a href={project.githubUrl} target='_blank' rel='noopener noreferrer' className='text-gray-600 text-sm dark:text-white/80 hover:underline'>GitHub</a>
+                    <div className=' border-gray-400 py-3 px-5 flex flex-col gap-2 shadow-md'>
+                        <div className='flex justify-between'>
+                            <h2 className='font-semibold text-gray-700 dark:text-white'>{project.title}</h2>
+                            <div className='flex gap-4 mt-2 justify-end'>
+                                <a href={project.liveUrl} target='_blank' rel='noopener noreferrer' className='text-blue-600 text-sm hover:underline'>Live Demo</a>
+                                <a href={project.githubUrl} target='_blank' rel='noopener noreferrer' className='text-gray-600 text-sm dark:text-white/80 hover:underline'>GitHub</a>
+                            </div>
                         </div>
+                        
+                        <p className='text-sm text-gray-600 dark:text-white/80'>{project.description}</p>
                     </div>
                 </motion.div>
             ))}

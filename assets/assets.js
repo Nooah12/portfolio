@@ -101,7 +101,7 @@ export const workData = [
         githubUrl: 'https://github.com/hasuwini77/parking-time-next',
     },
     {
-        title: 'MovieTime',
+        title: 'Movie app',
         description: 'Final gradutation project',
         bgImage: '/movietime-shows.jpg',
         liveUrl: 'https://movie-ejl6hnsb6-noahs-projects-41850a1d.vercel.app',
