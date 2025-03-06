@@ -43,7 +43,7 @@ const About = ({isDarkMode}) => {
             >
                 <p className='mb-10 max-w-2xl font-Ovo'>
                 Fully committed to the philosophy of lifelong learning, I’m a frontend developer student with a deep passion for JavaScript, Next, and all things web development. 
-                The unique combination of creativity, logic, and technology — along with the fact that there’s always something new to learn, keeps me excited and motivated. 
+                The unique combination of creativity, logic thinking, and technology — along with the fact that there’s always something new to learn, keeps me excited and motivated. 
                 <br></br>When I’m not at my computer I like to stay active by playing football or going to the gym, sometimes playing video games and hanging out with friends.
                 </p>
 
