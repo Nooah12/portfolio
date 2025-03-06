@@ -10,33 +10,32 @@ const Projects = ({isDarkMode}) => {
     transition={{ duration: 1 }}
     >
         <motion.h4 
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-        className='text-center mb-2 text-lg font-Ovo'
-        >My portfolio</motion.h4>
+            initial={{ y: -20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className='text-center mb-2 text-lg font-Ovo'
+        >Projects</motion.h4>
 
         <motion.h2
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-        className='text-center text-5xl font-Ovo'
-        >My latest work</motion.h2>
+            initial={{ y: -20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className='text-center text-5xl font-Ovo'>
+            My latest work
+        </motion.h2>
 
         <motion.p 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.5 }}
-        className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'
-        >
-            Welcome to my portfolio! Here you'll find a collection of my latest projects, showcasing my skills and expertise in web development. 
-            From responsive design to interactive features, I've worked on a variety of projects to demonstrate my ability to create engaging and functional websites. 
-            Take a look and see what I've been up to!
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.7, duration: 0.5 }}
+            className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
+            A selected collection of my projects - more to come!
+
         </motion.p>
 
         {/* ------------ Cards -------------- */}
 
-        <motion.div 
+{/*         <motion.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.6 }}
@@ -46,6 +45,7 @@ const Projects = ({isDarkMode}) => {
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                     style={{backgroundImage: `url(${project.bgImage})`}} className='aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-lg relative cursor-pointer group'>
+                        
                     <div className='bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7'>
                         <div className=''>
                             <h2 className='font-semibold'>{project.title}</h2>
@@ -57,18 +57,51 @@ const Projects = ({isDarkMode}) => {
                     </div>
                 </motion.div>
             ))}
+        </motion.div> */}
+
+
+        <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
+            className='grid grid-cols-projects my-10 gap-8 mx-auto dark:text-black'
+        >
+            {workData.map((project, index) => (
+                <motion.div key={index} whileHover={{ scale: 1.05 }}>
+                    {/* Project Image */}
+                    <motion.div 
+                        
+                        transition={{ duration: 0.3 }}
+                        style={{ backgroundImage: `url(${project.bgImage})` }}
+                        className='aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-lg'
+                    />
+                    
+                    {/* Project Info */}
+                    <div className=' border-gray-400 rounded-lg py-3 px-5 flex flex-col gap-2 shadow-md'>
+                        <h2 className='font-semibold text-gray-700 dark:text-white'>{project.title}</h2>
+                        <p className='text-sm text-gray-600 dark:text-white/80'>{project.description}</p>
+                        <div className='flex gap-4 mt-2 justify-end'>
+                            <a href={project.liveUrl} target='_blank' rel='noopener noreferrer' className='text-blue-600 text-sm hover:underline'>Live Demo</a>
+                            <a href={project.githubUrl} target='_blank' rel='noopener noreferrer' className='text-gray-600 text-sm dark:text-white/80 hover:underline'>GitHub</a>
+                        </div>
+                    </div>
+                </motion.div>
+            ))}
         </motion.div>
+
+
+
 
             {/* ------------ Button -------------*/}
 
-        <motion.a 
+        {/* <motion.a 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 1.1, duration: 0.5 }}
             href="" className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20
             hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover'>
                 Show more <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='right arrow' className='w-4'/>
-        </motion.a>
+        </motion.a> */}
     </motion.section>
   )
 }

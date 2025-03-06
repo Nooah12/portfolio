@@ -97,21 +97,29 @@ export const workData = [
         title: 'Parking Time',
         description: 'A real-world project in collaboration with Parking Time.',
         bgImage: '/parking-time.jpg',
+        liveUrl: 'https://parking-time-next.vercel.app/',
+        githubUrl: 'https://github.com/hasuwini77/parking-time-next',
     },
     {
         title: 'MovieTime',
         description: 'Final gradutation project',
-        bgImage: '/movietime-shows.png',
+        bgImage: '/movietime-shows.jpg',
+        liveUrl: 'https://movie-ejl6hnsb6-noahs-projects-41850a1d.vercel.app',
+        githubUrl: 'https://github.com/Nooah12/imdb-app'
     },
     {
         title: 'reddit clone',
         description: 'Database interaction, authentication, CRUD',
         bgImage: '/reddit-clone.png',
+        liveUrl: 'https://reddit-clone-two-rho.vercel.app/',
+        githubUrl: 'https://github.com/Nooah12/reddit-clone'
     },
     {
         title: 'TheMealDB',
         description: 'Context and Dynamic Routing',
         bgImage: '/themealdbb.png',
+        liveUrl: 'https://the-meal-db-phi.vercel.app/',
+        githubUrl: 'https://github.com/Nooah12/TheMealDB'
     },
 ]
 
