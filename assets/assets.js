@@ -101,13 +101,6 @@ export const workData = [
         githubUrl: 'https://github.com/hasuwini77/parking-time-next',
     },
     {
-        title: 'Movie app',
-        description: 'Final gradutation project',
-        bgImage: '/movietime-shows.jpg',
-        liveUrl: 'https://movie-ejl6hnsb6-noahs-projects-41850a1d.vercel.app',
-        githubUrl: 'https://github.com/Nooah12/imdb-app'
-    },
-    {
         title: 'reddit clone',
         description: 'Database interaction, authentication, CRUD',
         bgImage: '/reddit-clone.png',
@@ -120,6 +113,13 @@ export const workData = [
         bgImage: '/themealdbb.png',
         liveUrl: 'https://the-meal-db-phi.vercel.app/',
         githubUrl: 'https://github.com/Nooah12/TheMealDB'
+    },
+    {
+        title: 'Task management app',
+        description: 'Built using Test-Driven Development (TDD)',
+        bgImage: '/task-manager.png',
+        liveUrl: 'https://tmt-snowy.vercel.app/',
+        githubUrl: 'https://github.com/Nooah12/TMT'
     },
 ]
 
