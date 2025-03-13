@@ -102,7 +102,7 @@ export const workData = [
     },
     {
         title: 'Movie app',
-        description: 'Gradutation project using Next.js and Supabase (under construction)',
+        description: 'Gradutation project using Next.js and Supabase (work in progress)',
         bgImage: '/movieTime-shows.jpg',
         liveUrl: 'https://movie-app-three-olive.vercel.app/',
         githubUrl: 'https://github.com/Nooah12/movie-app'
