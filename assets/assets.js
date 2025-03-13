@@ -101,6 +101,13 @@ export const workData = [
         githubUrl: 'https://github.com/hasuwini77/parking-time-next',
     },
     {
+        title: 'Movie app',
+        description: 'Gradutation project using Next.js and Supabase (work in progress)',
+        bgImage: '/movietime-shows.jpg',
+        liveUrl: 'https://movie-app-three-olive.vercel.app/',
+        githubUrl: 'https://github.com/Nooah12/movie-app'
+    },
+    {
         title: 'reddit clone',
         description: 'Database interaction, authentication, CRUD',
         bgImage: '/reddit-clone.png',
