@@ -10,7 +10,7 @@ const Header = ({isDarkMode}) => {
             whileInView={{ scale: 1 }}
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
         >
-            <Image src={"/profilbild-square.jpg"} alt='' className='rounded-full w-32' width={128} height={128} />
+            <Image src={"/profil-manchester-svartvit-square.jpg"} alt='' className='rounded-full w-32' width={128} height={128} />
         </motion.div>
 
         <motion.h3 className='flex items-end text-xl md:text-2xl mb-3 gap-2 font-Ovo'
