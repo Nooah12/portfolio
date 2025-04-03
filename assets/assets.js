@@ -117,7 +117,7 @@ export const workData = [
     {
         title: 'TheMealDB',
         description: 'Context and Dynamic Routing',
-        bgImage: '/themealdb.png',
+        bgImage: '/themealdbb.png',
         liveUrl: 'https://the-meal-db-phi.vercel.app/',
         githubUrl: 'https://github.com/Nooah12/TheMealDB'
     },
