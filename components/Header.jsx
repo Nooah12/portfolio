@@ -4,7 +4,7 @@ import { motion } from "motion/react"
 
 const Header = ({isDarkMode}) => {
   return (
-    <motion.section className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
+    <motion.section className='h-screen flex flex-col items-center justify-center gap-4 text-center'>
         <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}

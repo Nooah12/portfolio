@@ -4,7 +4,7 @@ import { motion } from "motion/react"
 
 const Projects = ({isDarkMode}) => {
   return (
-    <motion.section id='project' className='w-full px-[12%] py-10 scroll-mt-20'
+    <motion.section id='project' className='py-10 scroll-mt-20'
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1 }}
@@ -64,7 +64,7 @@ const Projects = ({isDarkMode}) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.6 }}
-            className='grid grid-cols-projects my-10 gap-8 mx-auto dark:text-black'
+            className='grid grid-cols-projects justify-center my-10 gap-8 mx-auto dark:text-black'
         >
             {workData.map((project, index) => (
                 <motion.div key={index} whileHover={{ scale: 1.05 }}>
@@ -80,7 +80,7 @@ const Projects = ({isDarkMode}) => {
                         <div className='flex justify-between'>
                             <h2 className='font-semibold text-gray-700 dark:text-white'>{project.title}</h2>
                             <div className='flex gap-4 mt-2 justify-end'>
-                                <a href={project.liveUrl} target='_blank' rel='noopener noreferrer' className='text-blue-600 text-sm hover:underline'>Live Demo</a>
+                                <a href={project.liveUrl} target='_blank' rel='noopener noreferrer' className='text-blue-600 text-sm hover:underline'>Demo</a>
                                 <a href={project.githubUrl} target='_blank' rel='noopener noreferrer' className='text-gray-600 text-sm dark:text-white/80 hover:underline'>GitHub</a>
                             </div>
                         </div>

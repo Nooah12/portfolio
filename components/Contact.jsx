@@ -34,7 +34,7 @@ const Contact = () => {
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1 }}
-    id='contact' className='w-full px-[12%] py-10 scroll-mt-20 contact-bg dark:!bg-none'>
+    id='contact' className='py-10 scroll-mt-20 contact-bg dark:!bg-none'>
         <motion.h4 
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

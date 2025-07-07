@@ -36,7 +36,16 @@ html {
   }
 
   .grid-cols-projects {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, 450px)); */
+  }
+
+  .container-main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;  /* 16px */
+    padding-right: 2rem; /* 16px */
   }
 }
 
