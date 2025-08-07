@@ -94,18 +94,18 @@ export const assets = {
 
 export const workData = [
     {
+        title: 'Movie app',
+        description: 'Gradutation project using Next, TypeScript and Supabase',
+        bgImage: '/movieTime-shows.jpg',
+        liveUrl: 'https://movie-app-three-olive.vercel.app/',
+        githubUrl: 'https://github.com/Nooah12/movie-app'
+    },
+    {
         title: 'Parking Time',
         description: 'A real-world project in collaboration with Parking Time.',
         bgImage: '/parking-time.jpg',
         liveUrl: 'https://parking-time-next.vercel.app/',
         githubUrl: 'https://github.com/hasuwini77/parking-time-next',
-    },
-    {
-        title: 'Movie app',
-        description: 'Gradutation project using Next.js and Supabase (work in progress)',
-        bgImage: '/movieTime-shows.jpg',
-        liveUrl: 'https://movie-app-three-olive.vercel.app/',
-        githubUrl: 'https://github.com/Nooah12/movie-app'
     },
     {
         title: 'reddit clone',
