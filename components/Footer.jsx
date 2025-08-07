@@ -14,7 +14,7 @@ const Footer = ({isDarkMode}) => {
             </p>
             <div className='w-max flex items-center gap-2 mx-auto'>
                 <Image src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon} alt='' className='w-6' />
-                noah.gordon@edu.cmeducations.se
+                noah.o.gordon@gmail.com
             </div>
             <ul className='flex items-center justify-center gap-10 mt-4 sm:mt-0'>
                 <li><a target='_blank' href="https://github.com/Nooah12">Github</a></li>

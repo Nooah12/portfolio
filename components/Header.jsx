@@ -39,7 +39,7 @@ const Header = ({isDarkMode}) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.7 }}>
-            Currently seeking an <span className='text-red-400'>internship (LIA)</span> during spring 2025 – feel free to explore my projects!
+            Currently searching my first job as a <span className='text-red-400'> web developer </span> – feel free to explore my projects!
         </motion.p>
 
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
@@ -51,7 +51,7 @@ const Header = ({isDarkMode}) => {
             </motion.a> */}
             
             <motion.a 
-                href="/CV_LIA25.pdf" 
+                href="/noah-gordon-cv.pdf" 
                 target='_blank' 
                 rel='noopener noreferrer'
                 className='px-10 py-3 border rounded-full text-gray-700 border-gray-500 flex items-center gap-2
