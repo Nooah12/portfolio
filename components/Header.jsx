@@ -51,7 +51,7 @@ const Header = ({isDarkMode}) => {
             </motion.a> */}
             
             <motion.a 
-                href="/noah-gordon-cv.pdf" 
+                href="/noah-gordon-cv+personligt-brev.pdf" 
                 target='_blank' 
                 rel='noopener noreferrer'
                 className='px-10 py-3 border rounded-full text-gray-700 border-gray-500 flex items-center gap-2
