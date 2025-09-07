@@ -64,7 +64,7 @@ const Header = ({isDarkMode}) => {
             </motion.a>
 
             <div className='flex flex-row gap-4'>
-            {linkIcons.map((icon, iconDark, index) => (
+            {linkIcons.map((icon, index) => (
                 <motion.a 
                     href={icon.link} key={index}
                     target='_blank'
