@@ -46,6 +46,8 @@ import react from './skills/react.svg';
 import next from './skills/next.svg';
 import node from './skills/node.svg';
 import tailwind from './skills/tailwind.svg';
+import wordpress from './skills/wordpress.svg';
+import php from './skills/php.svg';
 
 export const assets = {
     user_image,
@@ -89,7 +91,7 @@ export const assets = {
     github_icon_dark,
     linkedin_icon,
     linkedin_icon_dark,
-    html, css, js, react, next, node, tailwind,
+    html, css, js, react, next, node, tailwind, wordpress, php,
 };
 
 export const workData = [
@@ -144,11 +146,10 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.html, assets.css, assets.js, assets.react, assets.next, assets.node, assets.git, assets.mongodb, assets.figma, assets.tailwind,  
+    assets.html, assets.css, assets.js, assets.react, assets.next, assets.node, assets.git, assets.mongodb, assets.figma, assets.tailwind, assets.wordpress, assets.php,
 ];
 
 export const linkIcons = [
     { icon: assets.github_icon, iconDark: assets.github_icon_dark, link: 'https://github.com/Nooah12' },
-   /*  { icon: assets.github_icon, link: 'https://github.com/Nooah12' }, */
     { icon: assets.linkedin_icon, iconDark: assets.linkedin_icon_dark, link: 'https://linkedin.com/in/noah-gordon12/' },
 ]
