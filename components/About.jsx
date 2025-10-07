@@ -26,13 +26,6 @@ const About = ({isDarkMode}) => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         >
-{/*             <motion.div className='w-64 sm:w-80 rounded-3xl max-w-none'
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6}}
-            >
-                <Image src={"/presentation-examens.JPG"} alt='user' className='rounded-3xl w-full' width={500} height={600} />
-            </motion.div> */}
 
             {/* ------------ Text --------------- */}
 
@@ -81,10 +74,11 @@ const About = ({isDarkMode}) => {
                 >
                     {toolsData.map((tool, index)=>(
                         <motion.li key={index} 
-                        className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
+                        className='flex flex-col items-center justify-center p-2 border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
                         whileHover={{ scale: 1.1 }}
                         >
-                            <Image src={tool} alt="tool" className='w-5 sm:w-7' />
+                            <Image src={tool.icon || tool} alt={tool.name || "tool"} className='w-5 sm:w-7 mb-1' />
+                            {tool.name && <span className='text-xs text-gray-600 dark:text-white/80'>{tool.name}</span>}
                         </motion.li>
                     ))}
                 </motion.ul>

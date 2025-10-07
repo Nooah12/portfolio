@@ -48,6 +48,7 @@ import node from './skills/node.svg';
 import tailwind from './skills/tailwind.svg';
 import wordpress from './skills/wordpress.svg';
 import php from './skills/php.svg';
+import docker from './skills/docker.svg';
 
 export const assets = {
     user_image,
@@ -91,7 +92,7 @@ export const assets = {
     github_icon_dark,
     linkedin_icon,
     linkedin_icon_dark,
-    html, css, js, react, next, node, tailwind, wordpress, php,
+    html, css, js, react, next, node, tailwind, wordpress, php, docker,
 };
 
 export const workData = [
@@ -146,7 +147,19 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.html, assets.css, assets.js, assets.react, assets.next, assets.node, assets.git, assets.mongodb, assets.figma, assets.tailwind, assets.wordpress, assets.php,
+    { icon: assets.html, name: 'HTML' },
+    { icon: assets.css, name: 'CSS' },
+    { icon: assets.js, name: 'JavaScript' },
+    { icon: assets.react, name: 'React' },
+    { icon: assets.next, name: 'Next.js' },
+    { icon: assets.node, name: 'Node.js' },
+    { icon: assets.git, name: 'Git' },
+    { icon: assets.mongodb, name: 'MongoDB' },
+    { icon: assets.figma, name: 'Figma' },
+    { icon: assets.tailwind, name: 'Tailwind' },
+    { icon: assets.wordpress, name: 'WordPress' },
+    { icon: assets.php, name: 'PHP' },
+    { icon: assets.docker, name: 'Docker' },
 ];
 
 export const linkIcons = [
