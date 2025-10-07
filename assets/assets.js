@@ -49,6 +49,7 @@ import tailwind from './skills/tailwind.svg';
 import wordpress from './skills/wordpress.svg';
 import php from './skills/php.svg';
 import docker from './skills/docker.svg';
+import typescript from './skills/typescript.svg';
 
 export const assets = {
     user_image,
@@ -92,7 +93,7 @@ export const assets = {
     github_icon_dark,
     linkedin_icon,
     linkedin_icon_dark,
-    html, css, js, react, next, node, tailwind, wordpress, php, docker,
+    html, css, js, react, next, node, tailwind, wordpress, php, docker, typescript,
 };
 
 export const workData = [
@@ -150,6 +151,7 @@ export const toolsData = [
     { icon: assets.html, name: 'HTML' },
     { icon: assets.css, name: 'CSS' },
     { icon: assets.js, name: 'JavaScript' },
+    { icon: assets.typescript, name: 'TypeScript' },
     { icon: assets.react, name: 'React' },
     { icon: assets.next, name: 'Next.js' },
     { icon: assets.node, name: 'Node.js' },

@@ -74,11 +74,12 @@ const About = ({isDarkMode}) => {
                 >
                     {toolsData.map((tool, index)=>(
                         <motion.li key={index} 
-                        className='flex flex-col items-center justify-center p-2 border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
+                        className='flex flex-col items-center justify-center w-14 xl:w-20 cursor-pointer hover:-translate-y-1 duration-500'
+                        // className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
                         whileHover={{ scale: 1.1 }}
                         >
-                            <Image src={tool.icon || tool} alt={tool.name || "tool"} className='w-5 sm:w-7 mb-1' />
-                            {tool.name && <span className='text-xs text-gray-600 dark:text-white/80'>{tool.name}</span>}
+                            <Image src={tool.icon || tool} alt={tool.name || "tool"} className='w-5 sm:w-7 xl:w-10 mb-1' />
+                            {tool.name && <span className='text-xs xl:text-sm text-gray-600 dark:text-white/80'>{tool.name}</span>}
                         </motion.li>
                     ))}
                 </motion.ul>
