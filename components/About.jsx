@@ -13,13 +13,13 @@ const About = ({isDarkMode}) => {
         initial={{ opacity: 1, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        >About me</motion.h4>
+        >Introduction</motion.h4>
 
         <motion.h2 className='text-center text-5xl font-Ovo'
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        >Introduction</motion.h2>
+        >About Me</motion.h2>
 
         <motion.div className='flex w-full flex-col lg:flex-row items-center justify-center gap-20 my-20 max-w-[47rem] mx-auto'
         initial={{ opacity: 0 }}
