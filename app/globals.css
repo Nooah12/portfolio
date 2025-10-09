@@ -55,3 +55,9 @@ html {
   background-position: center;
   background-size: 90% auto;
 }
+
+@layer components {
+  .active {
+    @apply hover:text-gray-500 underline underline-offset-8;
+  }
+}

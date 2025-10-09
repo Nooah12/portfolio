@@ -1,11 +1,39 @@
 'use client'
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { use, useEffect, useRef, useState } from 'react'
 
 const Navbar = ({isDarkMode, setIsDarkMode}) => {
     const [isScroll, setIsScroll] = useState(false);
     const sideMenuRef = useRef();
+
+    const [isActive, setIsActive] = useState("top");    // to track which section is active
+   
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ["top", "about", "project", "contact"];
+            const scrollPosition = window.scrollY + 200; // Add some offset to trigger earlier 
+            let currentSection = "top";
+
+            sections.forEach((section) => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const sectionTop = element.offsetTop;
+                    if (scrollPosition >= sectionTop) {
+                        currentSection = section;
+                    } else {
+                        return; // Exit the loop early if we've passed the current section
+                    }
+                }
+            });
+
+            setIsActive(currentSection);
+        };
+
+        window.addEventListener("scroll", handleScroll); 
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
 
     const openMenu = () => {
         sideMenuRef.current.style.transform = "translateX(-16rem)";
@@ -30,7 +58,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
     <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden'>
         <Image src={assets.header_bg_color} alt='' className="w-full" />
     </div>
-    <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 
+    <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-2 flex items-center justify-between z-50 
         ${isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-dark" : ""}`}>
         <a href="/">
             {/* <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt='' className="w-28 cursor-pointer mr-14" /> */}
@@ -39,9 +67,10 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
 
         <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 
             ${isScroll ? "" : "bg-white/50 shadow-sm dark:border dark:border-white/50 dark:bg-transparent"} `}>
-            <li><a className='font-Ovo' href="#top">Home</a></li>
-            <li><a className='font-Ovo' href="#about">About</a></li>
-            <li><a className='font-Ovo' href="#project">Projects</a></li>
+            <li><a className={`font-Ovo hover:text-gray-500 transition duration-300
+                ${isActive === "top" ? "active" : ""}`} href="#top">Home</a></li>
+            <li><a className={`${isActive === "about" ? "active" : ""} font-Ovo hover:text-gray-500 transition duration-300`} href="#about">About</a></li>
+            <li><a className={`${isActive === "project" ? "active" : ""} font-Ovo hover:text-gray-500 transition duration-300`} href="#project">Projects</a></li>
         </ul>
 
         <div className='flex items-center gap-4'>
@@ -76,4 +105,4 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
   )
 }
 
-export default Navbar 
+export default Navbar
