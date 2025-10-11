@@ -57,10 +57,12 @@ const Projects = ({isDarkMode}) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.6 }}
-            className='grid grid-cols-projects justify-center my-10 gap-8 mx-auto dark:text-black'
+            className='grid md:grid-cols-2 justify-center my-10 gap-8 mx-auto dark:text-black'
         >
             {workData.map((project, index) => (
-                <motion.div key={index} whileHover={{ scale: 1.05 }}>
+                <motion.div key={index} whileHover={{ scale: 1.05 }} className='flex flex-col rounded-lg overflow-hidden border border-gray-300 dark:border-white/20 shadow-lg
+                    hover:shadow-2xl transition duration-300 bg-white dark:bg-darkTheme'
+                >
                     {/* Project Image */}
                     <motion.div 
                         transition={{ duration: 0.3 }}
