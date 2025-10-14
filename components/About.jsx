@@ -69,15 +69,15 @@ const About = ({isDarkMode}) => {
                 transition={{ duration: 0.5, delay: 1.3 }}
                 >Skills</motion.h4>
 
-                <motion.ul className='flex flex-wrap justify-center items-center gap-3'
+                <motion.ul className='flex flex-wrap sm:grid sm:grid-cols-7 justify-center items-center gap-6'
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1.5 }}
                 >
                     {toolsData.map((tool, index)=>(
                         <motion.li key={index} 
-                        className='flex flex-col items-center justify-center w-14 md:w-16 xl:w-20 cursor-pointer hover:-translate-y-1 duration-500 aspect-square'
-                        // className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
+                        className='w-[clamp(3rem,6vw,5rem)] aspect-square flex flex-col items-center justify-center cursor-pointer hover:-translate-y-1 duration-500'
+                        //className='flex flex-col items-center justify-center w-14 md:w-16 xl:w-20 cursor-pointer hover:-translate-y-1 duration-500 aspect-square'   // fixed width
                         whileHover={{ scale: 1.1 }}
                         >
                             <Image src={tool.icon || tool} alt={tool.name || "tool"} className='w-7 xl:w-10 mb-1 aspect-square' />
