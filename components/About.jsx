@@ -23,7 +23,7 @@ const About = ({isDarkMode}) => {
         transition={{ duration: 0.5, delay: 0.5 }}
         >About Me</motion.h2>
 
-        <motion.div className='flex w-full flex-col lg:flex-row items-center justify-center gap-20 my-20 max-w-[47rem] mx-auto'
+        <motion.div className='flex w-full flex-col lg:flex-row items-center justify-center gap-20 my-10 max-w-[47rem] mx-auto'
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
