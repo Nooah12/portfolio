@@ -69,7 +69,7 @@ const About = ({isDarkMode}) => {
                 transition={{ duration: 0.5, delay: 1.3 }}
                 >Skills</motion.h4>
 
-                <motion.ul className='grid justify-center items-center gap-3 sm:gap-5 grid-cols-5 sm:grid-cols-6 md:grid-cols-7'
+                <motion.ul className='flex flex-wrap justify-center items-center gap-3 sm:gap-5 grid-cols-5 sm:grid-cols-6 md:grid-cols-7'
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1.5 }}
