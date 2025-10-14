@@ -6,7 +6,7 @@ import {motion} from "motion/react"
 
 const About = ({isDarkMode}) => {
   return (
-    <motion.section id='about' className='py-10 scroll-mt-20'
+    <motion.section id='about' className='py-10 md:mx-5 scroll-mt-20'
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1 }}
@@ -69,14 +69,14 @@ const About = ({isDarkMode}) => {
                 transition={{ duration: 0.5, delay: 1.3 }}
                 >Skills</motion.h4>
 
-                <motion.ul className='flex flex-wrap justify-center items-center gap-3 sm:gap-5'
+                <motion.ul className='grid justify-center items-center gap-3 sm:gap-5 grid-cols-5 sm:grid-cols-6 md:grid-cols-7'
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1.5 }}
                 >
                     {toolsData.map((tool, index)=>(
                         <motion.li key={index} 
-                        className='flex flex-col items-center justify-center w-14 xl:w-20 cursor-pointer hover:-translate-y-1 duration-500 aspect-square'
+                        className='flex flex-col items-center justify-center w-14 md:w-16 xl:w-20 cursor-pointer hover:-translate-y-1 duration-500 aspect-square'
                         // className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
                         whileHover={{ scale: 1.1 }}
                         >

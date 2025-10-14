@@ -44,12 +44,13 @@ import css from './skills/css.svg';
 import js from './skills/js.svg';
 import react from './skills/react.svg';
 import next from './skills/next.svg';
-import node from './skills/node.svg';
+import node from './skills/nodejs.svg';
 import tailwind from './skills/tailwind.svg';
 import wordpress from './skills/wordpress.svg';
 import php from './skills/php.svg';
 import docker from './skills/docker.svg';
 import typescript from './skills/typescript.svg';
+import supabase from './skills/supabase.svg';
 
 export const assets = {
     user_image,
@@ -93,7 +94,7 @@ export const assets = {
     github_icon_dark,
     linkedin_icon,
     linkedin_icon_dark,
-    html, css, js, react, next, node, tailwind, wordpress, php, docker, typescript,
+    html, css, js, react, next, node, tailwind, wordpress, php, docker, typescript, supabase,
 };
 
 export const workData = [
@@ -162,6 +163,7 @@ export const toolsData = [
     { icon: assets.wordpress, name: 'WordPress' },
     { icon: assets.php, name: 'PHP' },
     { icon: assets.docker, name: 'Docker' },
+    { icon: assets.supabase, name: 'Supabase' },
 ];
 
 export const linkIcons = [
