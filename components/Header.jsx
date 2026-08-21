@@ -1,85 +1,27 @@
-import { assets, linkIcons } from '@/assets/assets'
-import Image from 'next/image'
-import { motion } from "motion/react"
+import Image from "next/image";
+import { linkIcons } from "@/assets/assets";
 
-const Header = ({isDarkMode}) => {
+export default function Header() {
   return (
-    <motion.section className='h-screen flex flex-col items-center justify-center gap-4 text-center'>
-        <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-        >
-            <Image src={"/profil-manchester-square.JPG"} alt='' className='rounded-full w-32' width={128} height={128} sizes='100vh' />
-        </motion.div>
-
-        <motion.h3 className='flex items-end text-xl md:text-2xl mb-3 gap-2 font-Ovo'
-            initial={{ y: -20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-        >
-            Hello, World! I'ts me, Noah <motion.div
-                    animate={{ rotate: [0, 15, -15, 15, 0] }}
-                    transition={{ 
-                        duration: 0.5, 
-                        repeat: Infinity, 
-                        repeatDelay: 1.5,
-                        ease: "easeInOut" 
-                    }}
-            ><Image src={assets.hand_icon} alt='' className='w-6' /></motion.div>
-        </motion.h3>
-
-        <motion.h1 className='text-3xl sm:text-6xl lg:text-[66px] font-Ovo'
-            initial={{ y: -30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-        >frontend developer based in Stockholm</motion.h1>
-
-        <motion.p className='max-w-2xl mx-auto font-Ovo'
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.7 }}>
-            Currently looking for my first job as a <span className='text-red-400'> web developer </span> – feel free to explore my projects!
-        </motion.p>
-
-        <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-{/*             <motion.a href="#contact" className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 1 }}>
-                contact me <Image src={assets.right_arrow_white} alt='' className='w-4' /> 
-            </motion.a> */}
-            
-            <motion.a 
-                href="/noah-gordon-cv+personligt-brev.pdf" 
-                target='_blank' 
-                rel='noopener noreferrer'
-                className='px-10 py-3 border rounded-full text-gray-700 border-gray-500 flex items-center gap-2
-                hover:bg-lightHover duration-500 dark:text-black dark:border-white dark:hover:bg-darkHover bg-white dark:hover:text-white group'
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 1 }}>
-                my resume 
-                <Image src={assets.download_icon} alt='resume' className='w-4 dark:group-hover:filter dark:group-hover:brightness-0 dark:group-hover:invert' /> 
-            </motion.a>
-
-            <div className='flex flex-row gap-4'>
-            {linkIcons.map((icon, index) => (
-                <motion.a 
-                    href={icon.link} key={index}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    initial={{ y: 30, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 1.2 }}
-                    className='group'>
-                        <Image src={isDarkMode ? icon.iconDark : icon.icon} alt='link-icons' className='w-11'/>
-                </motion.a>
+    <section id="top" className="flex min-h-[min(700px,100svh)] items-center py-28 md:py-20">
+      <div className="enter w-full">
+        <p className="eyebrow">Frontend developer · Stockholm</p>
+        <p className="mt-5 flex items-center gap-2 font-Ovo text-xl sm:text-2xl">Hello, World! It&apos;s me, Noah <span className="wave inline-block" aria-label="waving hand" role="img">👋</span></p>
+        <h1 className="mt-4 max-w-4xl font-Ovo text-5xl leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">I build things and learn constantly.</h1>
+        <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 dark:text-white/70">As a frontend developer fresh out of school, I&apos;m looking for my first role where I can contribute to real projects and keep growing.</p>
+        <div className="mt-9 flex flex-wrap items-center gap-3">
+          <a href="#project" className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-indigo-700 dark:bg-white dark:text-slate-900">Explore my work</a>
+          <a href="/noah-gordon-cv+personligt-brev.pdf" target="_blank" rel="noopener noreferrer" className="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold transition hover:border-slate-900 dark:border-white/30 dark:hover:border-white">Download résumé</a>
+          <div className="ml-1 flex gap-3">
+            {linkIcons.map((item) => (
+              <a key={item.link} href={item.link} target="_blank" rel="noopener noreferrer" aria-label={item.link.includes("github") ? "GitHub" : "LinkedIn"} className="rounded-full p-2 transition hover:bg-slate-200 dark:hover:bg-white/10">
+                <Image src={item.icon} alt="" className="h-7 w-7 dark:hidden" />
+                <Image src={item.iconDark} alt="" className="hidden h-7 w-7 dark:block" />
+              </a>
             ))}
-            </div>
+          </div>
         </div>
-    </motion.section>
-  )
+      </div>
+    </section>
+  );
 }
-
-export default Header

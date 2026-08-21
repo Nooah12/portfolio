@@ -1,29 +1,11 @@
-import { assets } from '@/assets/assets'
-import Image from 'next/image'
-import React from 'react'
-
-const Footer = ({isDarkMode}) => {
+export default function Footer() {
   return (
-    <footer className='mt-4'>
-{/*         <div className='text-center'>
-            <Image src={isDarkMode ? '/noah-logo-darkk-removebg.png' : '/noah-logo-removebg.png'} alt='' className="w-36 mx-auto cursor-pointer mb-2 bg-transparent" width={500} height={200}/>
-        </div>  */}
-        <div className='text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6'>
-            <p>
-                <span className='text-gray-400'>© 2025 Noah Gordon</span>
-            </p>
-            <div className='w-max flex items-center gap-2 mx-auto'>
-                <Image src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon} alt='' className='w-6' />
-                noah.o.gordon@gmail.com
-            </div>
-            <ul className='flex items-center justify-center gap-10 mt-4 sm:mt-0'>
-                <li><a target='_blank' href="https://github.com/Nooah12">Github</a></li>
-                <li><a target='_blank' href="https://linkedin.com/in/noah-gordon12/">LinkedIn</a></li>
-            </ul>
-        </div>
-
+    <footer className="border-t border-slate-200 dark:border-white/10">
+      <div className="mx-auto flex max-w-[1120px] flex-col gap-4 px-5 py-8 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between dark:text-white/65">
+        <p>© {new Date().getFullYear()} Noah Gordon</p>
+        <a href="mailto:noah.o.gordon@gmail.com" className="hover:text-indigo-600 dark:hover:text-indigo-300">noah.o.gordon@gmail.com</a>
+        <div className="flex gap-5"><a href="https://github.com/Nooah12" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-300">GitHub</a><a href="https://linkedin.com/in/noah-gordon12/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-300">LinkedIn</a></div>
+      </div>
     </footer>
-  )
+  );
 }
-
-export default Footer

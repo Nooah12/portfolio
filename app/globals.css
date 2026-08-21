@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 *{
-  font-family: Outfit;
+  box-sizing: border-box;
 }
 
 /* html, body {
@@ -16,8 +16,8 @@ html {
 
 @theme {
   --color-lightHover: #fcf4ff;
-  --color-darkHover: #2a004a;
-  --color-darkTheme: #11001F;
+  --color-darkHover: #26233b;
+  --color-darkTheme: #151329;
 
   --font-Ovo: "Ovo", "sans-serif";
 
@@ -41,23 +41,46 @@ html {
   }
 
   .container-main {
-    max-width: 1200px;
+    max-width: 1120px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2rem;  /* 16px */
-    padding-right: 2rem; /* 16px */
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 
 .contact-bg {
-  background-image: url('/footer-bg-color.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 90% auto;
+  background: radial-gradient(circle at 50% 100%, rgba(196, 181, 253, 0.55), transparent 48%);
 }
 
 @layer components {
-  .active {
-    @apply hover:text-gray-500 underline underline-offset-8;
-  }
+  .nav-link { @apply text-sm font-medium text-slate-600 transition hover:text-slate-950 dark:text-white/70 dark:hover:text-white; }
+  .nav-link-active { @apply text-slate-950 dark:text-white; }
+}
+
+@layer utilities {
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.2em] text-indigo-600 dark:text-indigo-300; }
+  .section-title { @apply mt-3 font-Ovo text-4xl leading-tight tracking-tight sm:text-5xl; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .enter { animation: enter 700ms both; }
+  .enter-delay { animation: enter 700ms 120ms both; }
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .wave { animation: wave 2.8s ease-in-out infinite; transform-origin: 70% 75%; }
+}
+
+@keyframes wave {
+  0%, 55%, 100% { transform: rotate(0); }
+  62% { transform: rotate(16deg); }
+  70% { transform: rotate(-10deg); }
+  78% { transform: rotate(12deg); }
+  86% { transform: rotate(-4deg); }
 }

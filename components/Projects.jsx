@@ -1,79 +1,30 @@
-import { assets, workData } from '@/assets/assets'
-import { motion } from "motion/react"
+import Image from "next/image";
+import { workData } from "@/assets/assets";
 
-const Projects = ({isDarkMode}) => {
+export default function Projects() {
   return (
-    <motion.section id='project' className='py-10 scroll-mt-20'
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ duration: 1 }}
-    >
-        <motion.h2
-            initial={{ y: -20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className='text-center text-5xl font-Ovo'>
-            Projects
-        </motion.h2>
-
-        <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.5 }}
-            className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
-            A selected collection of my recent work
-
-        </motion.p>
-
-        {/* ------------ Cards -------------- */}
-        <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.9, duration: 0.6 }}
-            className='grid md:grid-cols-2 justify-center my-10 gap-8 mx-auto dark:text-black'
-        >
-            {workData.map((project, index) => (
-                <motion.div key={index} whileHover={{ scale: 1.05 }} className='flex flex-col rounded-lg overflow-hidden border border-gray-300 dark:border-white/20 shadow-lg
-                    hover:shadow-2xl transition duration-300 bg-white dark:bg-darkTheme'
-                >
-                    {/* Project Image */}
-                    <motion.div 
-                        transition={{ duration: 0.3 }}
-                        style={{ backgroundImage: `url(${project.bgImage})` }}
-                        className='aspect-video bg-center bg-no-repeat bg-cover'
-                    />
-                    
-                    {/* Project Info */}
-                    <div className=' border-gray-400 py-3 px-5 flex flex-col gap-2 shadow-md'>
-                        <div className='flex justify-between'>
-                            <h2 className='font-semibold text-gray-700 dark:text-white'>{project.title}</h2>
-                            <div className='flex gap-4 mt-2 justify-end'>
-                                <a href={project.liveUrl} target='_blank' rel='noopener noreferrer' className='text-blue-600 text-sm hover:underline'>Demo</a>
-                                <a href={project.githubUrl} target='_blank' rel='noopener noreferrer' className='text-gray-600 text-sm dark:text-white/80 hover:underline'>GitHub</a>
-                            </div>
-                        </div>
-                        
-                        <p className='text-sm text-gray-600 dark:text-white/80'>{project.description}</p>
-                    </div>
-                </motion.div>
-            ))}
-        </motion.div>
-
-
-
-
-            {/* ------------ Button -------------*/}
-
-        {/* <motion.a 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 1.1, duration: 0.5 }}
-            href="" className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20
-            hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover'>
-                Show more <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='right arrow' className='w-4'/>
-        </motion.a> */}
-    </motion.section>
-  )
+    <section id="project" className="scroll-mt-24 py-20 sm:py-28">
+      <div className="max-w-2xl">
+        <p className="eyebrow">Selected work</p>
+        <h2 className="section-title">Projects</h2>
+        {/* <p className="mt-5 leading-7 text-slate-600 dark:text-white/70">A selected collection of my recent work</p> */}
+      </div>
+      <div className="mt-12 grid gap-7 md:grid-cols-2">
+        {workData.map((project, index) => (
+          <article key={project.title} className={`group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-white/[0.03] ${index === 0 ? "md:col-span-2" : ""}`}>
+            <div className={`relative overflow-hidden bg-slate-200 ${index === 0 ? "aspect-[2/1]" : "aspect-video"}`}>
+              <Image src={project.bgImage} alt={`${project.title} project preview`} fill sizes={index === 0 ? "(max-width: 1120px) 100vw, 1120px" : "(max-width: 768px) 100vw, 50vw"} className="object-cover transition duration-500 group-hover:scale-[1.03]" />
+            </div>
+            <div className="p-6 sm:p-7">
+              <div className="flex flex-wrap items-start justify-between gap-4">
+                <div><p className="text-xs font-semibold uppercase tracking-[0.16em] text-indigo-600 dark:text-indigo-300">0{index + 1}</p><h3 className="mt-2 text-2xl font-semibold tracking-tight">{project.title}</h3></div>
+                <div className="flex gap-3 text-sm font-semibold"><a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-indigo-400 underline-offset-4 hover:text-indigo-600">Live site ↗</a><a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-slate-950 dark:text-white/60 dark:hover:text-white">Code ↗</a></div>
+              </div>
+              <p className="mt-4 max-w-2xl leading-7 text-slate-600 dark:text-white/70">{project.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
-
-export default Projects
