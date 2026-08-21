@@ -8,7 +8,7 @@ export default function About() {
         <div><p className="eyebrow">A little about me</p><h2 className="section-title">Curious by nature. Detail-oriented by habit.</h2></div>
         <div>
           <p className="text-lg leading-8 text-slate-600 dark:text-white/70">Fully committed to the philosophy of lifelong learning, I'm a recently graduated frontend developer with a deep passion for JavaScript and all things web development. The unique combination of creativity, logic thinking, and technology - along with the fact that there’s always something new to learn, keeps me excited and motivated.</p>
-          <p className="mt-5 leading-7 text-slate-600 dark:text-white/70">Away from my computer, I enjoy playing football, the gym, sometimes video games and spending time with friends and family.</p>
+          <p className="mt-5 leading-7 text-slate-600 dark:text-white/70">Away from my computer, I enjoy playing football, hit the gym, sometimes playing video games and spending time with friends and family.</p>
           <ul className="mt-10 grid gap-4 sm:grid-cols-3">
             {infoList.map(({ icon, iconDark, title, description }) => <li key={title} className="rounded-xl border border-slate-200 p-5 dark:border-white/10"><Image src={icon} alt="" className="h-7 w-7 dark:hidden" /><Image src={iconDark} alt="" className="hidden h-7 w-7 dark:block" /><h3 className="mt-6 font-semibold">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-600 dark:text-white/65">{description}</p></li>)}
           </ul>
