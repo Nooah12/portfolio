@@ -6,11 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "lodash": "^4.17.21",
-    "motion": "^12.4.9",
     "next": "15.2.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

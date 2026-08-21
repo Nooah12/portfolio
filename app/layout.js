@@ -11,16 +11,13 @@ const ovo = Ovo({
 
 export const metadata = {
   title: "Noah.js",
-  description: "console.log(Noah's Portfolio)",
+  description: "Frontend developer based in Stockholm.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden 
-        dark:bg-darkTheme dark:text-white`}
-      >
+      <body className={`${outfit.className} antialiased overflow-x-hidden bg-[#faf9f7] text-slate-900 dark:bg-darkTheme dark:text-white`}>
         {children}
       </body>
     </html>

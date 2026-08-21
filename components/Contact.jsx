@@ -1,100 +1,39 @@
-import React, { useState } from 'react'
-import Image from 'next/image'
-import { assets } from '@/assets/assets'
-import { motion } from "motion/react"
+"use client";
 
-const Contact = () => {
-    const [result, setResult] = useState("");
+import { useState } from "react";
 
-    const onSubmit = async (event) => {
+export default function Contact() {
+  const [result, setResult] = useState("");
+  const [sending, setSending] = useState(false);
+
+  async function onSubmit(event) {
     event.preventDefault();
-    setResult("Sending....");
+    setSending(true);
+    setResult("");
     const formData = new FormData(event.target);
-
     formData.append("access_key", "58199eac-cdd1-4c07-8306-87aefad11d41");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      setResult("Form Submitted Successfully");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
+      const data = await response.json();
+      if (!data.success) throw new Error(data.message || "Something went wrong. Please try again.");
       event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
-    }
-  };
+      setResult("Thanks — your message is on its way.");
+    } catch (error) { setResult(error.message || "Something went wrong. Please try again."); }
+    finally { setSending(false); }
+  }
 
   return (
-    <motion.section 
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ duration: 1 }}
-    id='contact' className='py-10 scroll-mt-20 contact-bg dark:!bg-none'>
-        <motion.h4 
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-        className='text-center mb-2 text-lg font-Ovo'>Connect with me</motion.h4>
-
-        <motion.h2 
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className='text-center text-5xl font-Ovo'>Get in touch</motion.h2>
-
-        <motion.p 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.5 }}
-        className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
-            If you found me even slightly interesting, don't hesitate to reach out! <br></br>I'll get back to you as soon as possible.
-        </motion.p>
-
-        <motion.form 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.9, duration: 0.5 }}
-        onSubmit={onSubmit} className='max-w-2xl mx-auto'>
-            <div className='grid grid-cols-auto gap-6 mt-10 mb-8'>
-                <motion.input 
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 1.1, duration: 0.6 }}
-                name='name' type="text" placeholder='Your name' required className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white
-                dark:bg-darkHover/30 dark:border-white/90' />
-                <motion.input 
-                initial={{ x: 50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 1.2, duration: 0.6 }}
-                name='email' type="text" placeholder='Your email' required className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white
-                dark:bg-darkHover/30 dark:border-white/90' />
-            </div>
-
-            <motion.textarea 
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.3, duration: 0.6 }}
-            name="message" id="" rows='6' placeholder='Your message' className='w-full p-4 mb-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white
-            dark:bg-darkHover/30 dark:border-white/90'></motion.textarea>
-
-            <motion.button 
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            type='submit' className='px-8 py-3 border border-gray-400 rounded-full bg-black/80 text-white flex items-center gap-2 mx-auto 
-            hover:bg-black duration-500 cursor-pointer dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover'>
-                Send message <Image src={assets.right_arrow_white} alt='' className='w-4' />
-            </motion.button>  
-
-            <p className='mt-4'>{result}</p>
-        </motion.form>
-        
-    </motion.section>
-  )
+    <section id="contact" className="contact-bg scroll-mt-24 py-20 sm:py-28">
+      <div className="mx-auto max-w-2xl rounded-3xl border border-white/70 bg-white/75 p-6 shadow-sm backdrop-blur sm:p-10 dark:border-white/10 dark:bg-white/[0.04]">
+        <p className="eyebrow">Let&apos;s connect</p><h2 className="section-title">Have a project or opportunity in mind?</h2>
+        <p className="mt-5 leading-7 text-slate-600 dark:text-white/70">I&apos;m always happy to hear from people working on interesting things. Send me a message and I&apos;ll get back to you as soon as I can.</p>
+        <form onSubmit={onSubmit} className="mt-9 space-y-5">
+          <div className="grid gap-5 sm:grid-cols-2"><label className="text-sm font-medium">Name<input name="name" required className="mt-2 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 dark:border-white/20 dark:bg-white/5" /></label><label className="text-sm font-medium">Email<input name="email" type="email" required className="mt-2 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 dark:border-white/20 dark:bg-white/5" /></label></div>
+          <label className="block text-sm font-medium">Message<textarea name="message" rows="6" required className="mt-2 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 dark:border-white/20 dark:bg-white/5" /></label>
+          <button type="submit" disabled={sending} className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-white dark:text-slate-900">{sending ? "Sending…" : "Send message"}</button>
+          {result && <p role="status" className="text-sm text-slate-600 dark:text-white/70">{result}</p>}
+        </form>
+      </div>
+    </section>
+  );
 }
-
-export default Contact
