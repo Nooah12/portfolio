@@ -64,16 +64,6 @@ html {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .enter { animation: enter 700ms both; }
-  .enter-delay { animation: enter 700ms 120ms both; }
-}
-
-@keyframes enter {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (prefers-reduced-motion: no-preference) {
   .wave { animation: wave 2.8s ease-in-out infinite; transform-origin: 70% 75%; }
 }
 
