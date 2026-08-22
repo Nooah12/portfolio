@@ -32,11 +32,19 @@ export default function About() {
           </ul>
           <div className="mt-10">
             <p className="text-sm font-semibold">Tools I enjoy working with</p>
-            <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-4">
-              {toolsData.map((tool) => (
-                <li key={tool.name} className="flex items-center gap-2 text-sm text-slate-600 dark:text-white/70">
-                  <Image src={tool.icon} alt="" className="h-5 w-5" />{tool.name}
-                </li>
+            <ul className="mt-5 grid grid-cols-4 gap-x-1 gap-y-6 sm:grid-cols-7">
+              {toolsData.map((tool, i) => (
+                <motion.li
+                  key={tool.name}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.5, delay: i * 0.12, ease: "easeOut" }}
+                  className="flex flex-col items-center gap-1.5 text-center"
+                >
+                  <Image src={tool.icon} alt="" className="h-5 w-5" />
+                  <span className="text-[11px] text-slate-500 dark:text-white/60">{tool.name}</span>
+                </motion.li>
               ))}
             </ul>
           </div>
