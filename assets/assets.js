@@ -106,6 +106,13 @@ export const workData = [
         githubUrl: 'https://github.com/Nooah12/movie-app'
     },
     {
+        title: 'BookApp',
+        description: 'A simple book management app built with Angular and C#.',
+        bgImage: '/bookApp.png',
+        liveUrl: 'https://book-app-alpha-eight.vercel.app/',
+        githubUrl: 'https://github.com/Nooah12/BookApp'
+    },
+    {
         title: 'Parking Time',
         description: 'A real-world project in collaboration with Parking Time.',
         bgImage: '/parking-time.jpg',
@@ -118,13 +125,6 @@ export const workData = [
         bgImage: '/reddit-clone.png',
         liveUrl: 'https://reddit-clone-two-rho.vercel.app/',
         githubUrl: 'https://github.com/Nooah12/reddit-clone'
-    },
-    {
-        title: 'TheMealDB',
-        description: 'Context and Dynamic Routing',
-        bgImage: '/themealdbb.png',
-        liveUrl: 'https://the-meal-db-phi.vercel.app/',
-        githubUrl: 'https://github.com/Nooah12/TheMealDB'
     },
     {
         title: 'Task management app',
