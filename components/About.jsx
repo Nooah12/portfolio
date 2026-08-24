@@ -32,7 +32,7 @@ export default function About() {
           </ul>
           <div className="mt-10">
             <p className="text-sm font-semibold">Tools I enjoy working with</p>
-            <ul className="mt-5 grid grid-cols-4 gap-x-1 gap-y-6 sm:grid-cols-7">
+            <ul className="mt-5 grid grid-cols-4 gap-x-1 gap-y-6 sm:grid-cols-6">
               {toolsData.map((tool, i) => (
                 <motion.li
                   key={tool.name}

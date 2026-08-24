@@ -51,6 +51,8 @@ import php from './skills/php.svg';
 import docker from './skills/docker.svg';
 import typescript from './skills/typescript.svg';
 import supabase from './skills/supabase.svg';
+import angular from './skills/angular.svg';
+import csharp from './skills/csharp.svg';
 
 export const assets = {
     user_image,
@@ -94,7 +96,7 @@ export const assets = {
     github_icon_dark,
     linkedin_icon,
     linkedin_icon_dark,
-    html, css, js, react, next, node, tailwind, wordpress, php, docker, typescript, supabase,
+    html, css, js, react, next, node, tailwind, wordpress, php, docker, typescript, supabase, angular, csharp
 };
 
 export const workData = [
@@ -164,6 +166,8 @@ export const toolsData = [
     { icon: assets.php, name: 'PHP' },
     { icon: assets.docker, name: 'Docker' },
     { icon: assets.supabase, name: 'Supabase' },
+    { icon: assets.angular, name: 'Angular' },
+    { icon: assets.csharp, name: 'C#' },
 ];
 
 export const linkIcons = [
