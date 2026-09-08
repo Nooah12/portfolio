@@ -31,7 +31,7 @@ export default function About() {
             ))}
           </ul>
           <div className="mt-10">
-            <p className="text-sm font-semibold">Tools I enjoy working with</p>
+            <p className="text-sm font-semibold">Some tools I've worked with</p>
             <ul className="mt-5 grid grid-cols-4 gap-x-1 gap-y-6 sm:grid-cols-6">
               {toolsData.map((tool, i) => (
                 <motion.li

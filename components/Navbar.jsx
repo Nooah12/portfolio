@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-[#faf9f7]/85 backdrop-blur dark:border-white/10 dark:bg-darkTheme/85">
       <nav className="mx-auto flex h-16 max-w-[1120px] items-center justify-between px-5" aria-label="Main navigation">
-        <a href="#top" className="font-Ovo text-xl tracking-tight">Noah Gordon<span className="text-indigo-600 dark:text-indigo-300">.</span></a>
+        <a href="#top" className="font-Ovo text-xl tracking-tight">noahcodes<span className="text-indigo-600 dark:text-indigo-300">.</span></a>
         <div className="hidden items-center gap-7 md:flex">{links.map(([label, href]) => <a key={href} href={href} className="nav-link">{label}</a>)}</div>
         <div className="flex items-center gap-2">
           <button type="button" onClick={toggleTheme} className="grid h-9 w-9 place-items-center rounded-full text-lg transition hover:bg-slate-200 dark:hover:bg-white/10" aria-label="Toggle colour theme">{dark ? "☀" : "◐"}</button>
